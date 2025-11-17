@@ -7,8 +7,8 @@ class AppDimens {
   static const double desktopWidth = 1440.0;
 
   // Header height
-  static const double desktopHeaderHeight = 754;
-  static const double tabletHeaderHeight = 647;
-  static const double mobileHeaderHeight = 601;
+  static const double desktopHeaderHeight = 800;
+  static const double tabletHeaderHeight = 700;
+  static const double mobileHeaderHeight = 600;
 
 }
