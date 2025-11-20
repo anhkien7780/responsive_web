@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_web/ui/page/home/widgets/home_header.dart';
 import 'package:responsive_web/ui/page/home/widgets/skill_list.dart';
+import 'package:responsive_web/ui/page/home/widgets/team_intro.dart';
 import 'package:responsive_web/ui/page/home/widgets/test_benefits_section.dart';
 
 class HomePage extends StatelessWidget {
@@ -10,7 +11,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        children: [HomeHeader(), SkillList(), TestBenefitsSection()],
+        children: [
+          HomeHeader(),
+          SkillList(),
+          TestBenefitsSection(),
+          TeamIntro(),
+        ],
       ),
     );
   }
