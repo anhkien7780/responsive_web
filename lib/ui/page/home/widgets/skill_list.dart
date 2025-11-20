@@ -1,59 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:responsive_web/common/app_dimens.dart';
-import 'package:responsive_web/common/app_svgs.dart';
-
-class Skill {
-  Skill({
-    required this.name,
-    required this.description,
-    required this.iconPath,
-  });
-
-  String name;
-  String description;
-  String iconPath;
-}
-
-final skills = [
-  Skill(
-    name: "Döküman Analizi",
-    description:
-        "Ante vulputate ut at accumsan et. Feugiat at tempus, est senectus amet, elementum.",
-    iconPath: AppSvgs.icFile,
-  ),
-  Skill(
-    name: "Kabul ve Değerlendirme",
-    description:
-        "Ante vulputate ut at accumsan et. Feugiat at tempus, est senectus amet, elementum.",
-    iconPath: AppSvgs.icStar,
-  ),
-  Skill(
-    name: "İş Kuralları Analizi",
-    description:
-        "Ante vulputate ut at accumsan et. Feugiat at tempus, est senectus amet, elementum.",
-    iconPath: AppSvgs.icCrown,
-  ),
-  Skill(
-    name: "Akış Diyagramları",
-    description:
-        "Ante vulputate ut at accumsan et. Feugiat at tempus, est senectus amet, elementum.",
-    iconPath: AppSvgs.icChart,
-  ),
-  Skill(
-    name: "Paydaş Analizi",
-    description:
-        "Ante vulputate ut at accumsan et. Feugiat at tempus, est senectus amet, elementum.",
-    iconPath: AppSvgs.icCircleChart,
-  ),
-  Skill(
-    name: "Prototipleme",
-    description:
-        "Ante vulputate ut at accumsan et. Feugiat at tempus, est senectus amet, elementum.",
-    iconPath: AppSvgs.icFigma,
-  ),
-];
+import 'package:responsive_web/common/app_data.dart';
 
 class SkillList extends StatelessWidget {
   const SkillList({super.key});
@@ -76,11 +24,10 @@ class SkillList extends StatelessWidget {
           ],
         ).value,
       ),
-      constraints: const BoxConstraints(maxWidth: AppDimens.desktopWidth),
       child: Column(
         children: [
           Text(
-            "Kalite ve Süreç Yönetimi",
+            AppData.skillTitle,
             style: TextStyle(
               fontSize: ResponsiveValue<double>(
                 context,
@@ -102,7 +49,7 @@ class SkillList extends StatelessWidget {
             ).value,
           ),
           Text(
-            "Müşterilerimizin yüksek kalite seviyelerini koruyabilmeleri için farklı sektörlerde tecrübe kazanmış uzman kadrolarımızla Proje Yönetimi, İş Analizi ve Test Yönetimi hizmetleri sunmaktayız.",
+            AppData.skillDescription,
             style: TextStyle(
               fontSize: ResponsiveValue<double>(
                 context,
@@ -135,7 +82,7 @@ class SkillList extends StatelessWidget {
             ).value,
             child: ResponsiveGridView.builder(
               alignment: AlignmentGeometry.center,
-              itemCount: skills.length,
+              itemCount: AppData.skills.length,
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
               gridDelegate: ResponsiveGridDelegate(
@@ -146,9 +93,9 @@ class SkillList extends StatelessWidget {
               ),
               itemBuilder: (context, index) {
                 return SkillCard(
-                  iconPath: skills[index].iconPath,
-                  name: skills[index].name,
-                  description: skills[index].description,
+                  iconPath: AppData.skills[index].iconPath,
+                  name: AppData.skills[index].name,
+                  description: AppData.skills[index].description,
                 );
               },
             ),
