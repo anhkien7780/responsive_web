@@ -124,7 +124,7 @@ class SkillList extends StatelessWidget {
             ).value,
           ),
           ResponsiveGridView.builder(
-            alignment: Alignment.center,
+            alignment: AlignmentGeometry.center,
             itemCount: skills.length,
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
