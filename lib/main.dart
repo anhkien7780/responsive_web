@@ -16,11 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       builder: (context, child) => ResponsiveBreakpoints.builder(
         breakpoints: const [
-          Breakpoint(
-            start: 0,
-            end: AppDimens.tabletWidth,
-            name: MOBILE,
-          ),
+          Breakpoint(start: 0, end: AppDimens.tabletWidth, name: MOBILE),
           Breakpoint(
             start: AppDimens.tabletWidth + 1,
             end: AppDimens.desktopWidth,
@@ -32,7 +28,7 @@ class MyApp extends StatelessWidget {
             name: DESKTOP,
           ),
         ],
-        child: child!,
+        child: ClampingScrollWrapper.builder(context, child!),
       ),
       onGenerateRoute: (settings) {
         return MaterialPageRoute(

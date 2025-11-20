@@ -129,24 +129,48 @@ class SkillList extends StatelessWidget {
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
             gridDelegate: ResponsiveGridDelegate(
+              maxCrossAxisExtent: 300,
               crossAxisExtent: 300,
-              mainAxisSpacing: 88,
+              mainAxisSpacing: 80,
               crossAxisSpacing: 100,
               childAspectRatio: 1.37,
             ),
             itemBuilder: (context, index) {
-              return Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SvgPicture.asset(skills[index].iconPath),
-                  Text(skills[index].name, textAlign: TextAlign.center),
-                  Text(skills[index].description, textAlign: TextAlign.center),
-                ],
+              return SkillCard(
+                iconPath: skills[index].iconPath,
+                name: skills[index].name,
+                description: skills[index].description,
               );
             },
           ),
         ],
       ),
+    );
+  }
+}
+
+class SkillCard extends StatelessWidget {
+  const SkillCard({
+    super.key,
+    required this.iconPath,
+    required this.name,
+    required this.description,
+  });
+
+  final String iconPath;
+  final String name;
+  final String description;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      spacing: 10,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        SvgPicture.asset(iconPath),
+        Text(name, textAlign: TextAlign.center),
+        Text(description, textAlign: TextAlign.center),
+      ],
     );
   }
 }

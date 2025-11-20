@@ -1,4 +1,4 @@
-class AppSvgs{
+class AppSvgs {
   AppSvgs._();
 
   static final icChart = "assets/svgs/ic_chart.svg";
@@ -8,4 +8,6 @@ class AppSvgs{
   static final icFile = "assets/svgs/ic_file.svg";
   static final icGroup = "assets/svgs/ic_group.svg";
   static final icStar = "assets/svgs/ic_star.svg";
+  static final icCaretCircleDoubleRight =
+      "assets/svgs/ic_caret_circle_double_right.svg";
 }
