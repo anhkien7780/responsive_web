@@ -123,25 +123,35 @@ class SkillList extends StatelessWidget {
               ],
             ).value,
           ),
-          ResponsiveGridView.builder(
+          Container(
             alignment: AlignmentGeometry.center,
-            itemCount: skills.length,
-            shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
-            gridDelegate: ResponsiveGridDelegate(
-              maxCrossAxisExtent: 300,
-              crossAxisExtent: 300,
-              mainAxisSpacing: 80,
-              crossAxisSpacing: 100,
-              childAspectRatio: 1.37,
+            width: ResponsiveValue<double>(
+              context,
+              defaultValue: 1153,
+              conditionalValues: [
+                Condition.smallerThan(name: DESKTOP, value: 764),
+                Condition.smallerThan(name: TABLET, value: 335),
+              ],
+            ).value,
+            child: ResponsiveGridView.builder(
+              alignment: AlignmentGeometry.center,
+              itemCount: skills.length,
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              gridDelegate: ResponsiveGridDelegate(
+                maxCrossAxisExtent: 350,
+                mainAxisSpacing: 80,
+                crossAxisSpacing: 116,
+                childAspectRatio: 1.2,
+              ),
+              itemBuilder: (context, index) {
+                return SkillCard(
+                  iconPath: skills[index].iconPath,
+                  name: skills[index].name,
+                  description: skills[index].description,
+                );
+              },
             ),
-            itemBuilder: (context, index) {
-              return SkillCard(
-                iconPath: skills[index].iconPath,
-                name: skills[index].name,
-                description: skills[index].description,
-              );
-            },
           ),
         ],
       ),
@@ -167,7 +177,7 @@ class SkillCard extends StatelessWidget {
       spacing: 10,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        SvgPicture.asset(iconPath),
+        SvgPicture.asset(iconPath, width: 91, height: 81),
         Text(name, textAlign: TextAlign.center),
         Text(description, textAlign: TextAlign.center),
       ],
