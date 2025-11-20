@@ -16,21 +16,20 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       builder: (context, child) => ResponsiveBreakpoints.builder(
         breakpoints: const [
-          Breakpoint(start: 0, end: AppDimens.mobileWidth, name: MOBILE),
           Breakpoint(
-            start: AppDimens.mobileWidth + 1,
+            start: 0,
             end: AppDimens.tabletWidth,
-            name: TABLET,
+            name: MOBILE,
           ),
           Breakpoint(
             start: AppDimens.tabletWidth + 1,
             end: AppDimens.desktopWidth,
-            name: DESKTOP,
+            name: TABLET,
           ),
           Breakpoint(
             start: AppDimens.desktopWidth + 1,
             end: double.infinity,
-            name: "XL",
+            name: DESKTOP,
           ),
         ],
         child: child!,

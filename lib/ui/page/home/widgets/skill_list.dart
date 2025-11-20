@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:responsive_web/common/app_dimens.dart';
 import 'package:responsive_web/common/app_svgs.dart';
 
 class Skill {
@@ -64,18 +65,18 @@ class SkillList extends StatelessWidget {
         vertical: ResponsiveValue<double>(
           context,
           defaultValue: 120,
-          conditionalValues: [Condition.equals(name: MOBILE, value: 60)],
+          conditionalValues: [Condition.smallerThan(name: DESKTOP, value: 60)],
         ).value,
         horizontal: ResponsiveValue<double>(
           context,
-          defaultValue: 20,
+          defaultValue: 143,
           conditionalValues: [
-            Condition.largerThan(name: DESKTOP, value: 143),
-            Condition.largerThan(name: TABLET, value: 130),
+            Condition.smallerThan(name: DESKTOP, value: 130),
+            Condition.smallerThan(name: TABLET, value: 20),
           ],
         ).value,
       ),
-      constraints: const BoxConstraints(maxWidth: 1153),
+      constraints: const BoxConstraints(maxWidth: AppDimens.desktopWidth),
       child: Column(
         children: [
           Text(
@@ -84,7 +85,9 @@ class SkillList extends StatelessWidget {
               fontSize: ResponsiveValue<double>(
                 context,
                 defaultValue: 36,
-                conditionalValues: [Condition.equals(name: MOBILE, value: 24)],
+                conditionalValues: [
+                  Condition.smallerThan(name: TABLET, value: 24),
+                ],
               ).value,
             ),
             textAlign: TextAlign.center,
@@ -94,7 +97,7 @@ class SkillList extends StatelessWidget {
               context,
               defaultValue: 30,
               conditionalValues: [
-                Condition.smallerThan(name: TABLET, value: 15),
+                Condition.smallerThan(name: DESKTOP, value: 15),
               ],
             ).value,
           ),
@@ -104,7 +107,9 @@ class SkillList extends StatelessWidget {
               fontSize: ResponsiveValue<double>(
                 context,
                 defaultValue: 24,
-                conditionalValues: [Condition.equals(name: MOBILE, value: 12)],
+                conditionalValues: [
+                  Condition.smallerThan(name: TABLET, value: 12),
+                ],
               ).value,
             ),
             textAlign: TextAlign.center,
@@ -114,7 +119,7 @@ class SkillList extends StatelessWidget {
               context,
               defaultValue: 90,
               conditionalValues: [
-                Condition.smallerThan(name: TABLET, value: 40),
+                Condition.smallerThan(name: DESKTOP, value: 40),
               ],
             ).value,
           ),

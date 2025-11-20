@@ -31,8 +31,8 @@ class HomeHeader extends StatelessWidget {
           context,
           defaultValue: 135,
           conditionalValues: [
-            Condition.equals(name: TABLET, value: 96),
-            Condition.equals(name: MOBILE, value: 62),
+            Condition.smallerThan(name: DESKTOP, value: 96),
+            Condition.smallerThan(name: TABLET, value: 62),
           ],
         ).value,
         children: [_createActions(context), _createInfo(context)],
@@ -49,13 +49,13 @@ class HomeHeader extends StatelessWidget {
           context,
           defaultValue: 125,
           conditionalValues: [
-            Condition.equals(name: TABLET, value: 40),
-            Condition.equals(name: MOBILE, value: 20),
+            Condition.smallerThan(name: DESKTOP, value: 40),
+            Condition.smallerThan(name: TABLET, value: 20),
           ],
         ).value,
       ),
       child: Align(
-        alignment: Alignment.topRight,
+        alignment: Alignment.centerRight,
         child: SizedBox(
           height: 40,
           child: Row(
@@ -112,8 +112,8 @@ class HomeHeader extends StatelessWidget {
           context,
           defaultValue: 122,
           conditionalValues: [
-            Condition.equals(name: TABLET, value: 84),
-            Condition.equals(name: MOBILE, value: 20),
+            Condition.smallerThan(name: DESKTOP, value: 84),
+            Condition.smallerThan(name: TABLET, value: 20),
           ],
         ).value,
       ),
@@ -133,8 +133,8 @@ class HomeHeader extends StatelessWidget {
                     context,
                     defaultValue: 64,
                     conditionalValues: [
-                      Condition.equals(name: TABLET, value: 56),
-                      Condition.equals(name: MOBILE, value: 32),
+                      Condition.smallerThan(name: DESKTOP, value: 56),
+                      Condition.smallerThan(name: TABLET, value: 32),
                     ],
                   ).value,
                   fontWeight: FontWeight.w700,
@@ -146,7 +146,7 @@ class HomeHeader extends StatelessWidget {
                   context,
                   defaultValue: 20,
                   conditionalValues: [
-                    Condition.equals(name: MOBILE, value: 30),
+                    Condition.smallerThan(name: TABLET, value: 30),
                   ],
                 ).value,
               ),
@@ -157,8 +157,8 @@ class HomeHeader extends StatelessWidget {
                     context,
                     defaultValue: 20,
                     conditionalValues: [
-                      Condition.equals(name: TABLET, value: 16),
-                      Condition.equals(name: MOBILE, value: 12),
+                      Condition.smallerThan(name: DESKTOP, value: 16),
+                      Condition.smallerThan(name: TABLET, value: 12),
                     ],
                   ).value,
                 ),
@@ -169,8 +169,8 @@ class HomeHeader extends StatelessWidget {
                   context,
                   defaultValue: 50,
                   conditionalValues: [
-                    Condition.equals(name: TABLET, value: 20),
-                    Condition.equals(name: MOBILE, value: 47),
+                    Condition.smallerThan(name: DESKTOP, value: 20),
+                    Condition.smallerThan(name: TABLET, value: 47),
                   ],
                 ).value,
               ),
@@ -179,8 +179,8 @@ class HomeHeader extends StatelessWidget {
                   context,
                   defaultValue: 504,
                   conditionalValues: [
-                    Condition.equals(name: TABLET, value: 422),
-                    Condition.equals(name: MOBILE, value: 335),
+                    Condition.smallerThan(name: DESKTOP, value: 422),
+                    Condition.smallerThan(name: TABLET, value: 335),
                   ],
                 ).value,
                 child: TextField(
