@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:responsive_web/common/app_data.dart';
 import 'package:responsive_web/common/app_dimens.dart';
 import 'package:responsive_web/common/app_images.dart';
 
@@ -91,7 +92,14 @@ class HomeHeader extends StatelessWidget {
                     ),
               OutlinedButton(
                 onPressed: () {},
-                style: OutlinedButton.styleFrom(backgroundColor: Colors.red),
+                style: OutlinedButton.styleFrom(
+                  backgroundColor: Colors.red,
+                  side: BorderSide.none,
+                  fixedSize: Size.fromHeight(40),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                ),
                 child: const Text(
                   "İletişim",
                   style: TextStyle(color: Colors.white),
@@ -127,7 +135,7 @@ class HomeHeader extends StatelessWidget {
                 : CrossAxisAlignment.start,
             children: [
               Text(
-                "Bilgi Teknolojilerinde 23 Yıllık Tecrübe",
+                AppData.headerTitle,
                 style: TextStyle(
                   fontSize: ResponsiveValue<double>(
                     context,
@@ -151,7 +159,7 @@ class HomeHeader extends StatelessWidget {
                 ).value,
               ),
               Text(
-                "Müşterilerimizin yüksek kalite seviyelerini koruyabilmeleri için farklı sektörlerde tecrübe kazanmış uzman kadrolarımızla Proje Yönetimi, İş Analizi ve Test Yönetimi hizmetleri sunmaktayız.",
+                AppData.headerDescription,
                 style: TextStyle(
                   fontSize: ResponsiveValue<double>(
                     context,
@@ -174,7 +182,11 @@ class HomeHeader extends StatelessWidget {
                   ],
                 ).value,
               ),
-              SizedBox(
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(4),
+                ),
                 width: ResponsiveValue<double>(
                   context,
                   defaultValue: 504,
@@ -185,16 +197,25 @@ class HomeHeader extends StatelessWidget {
                 ).value,
                 child: TextField(
                   decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    enabledBorder: OutlineInputBorder(),
-                    suffixIcon: OutlinedButton(
-                      style: OutlinedButton.styleFrom(
-                        backgroundColor: Colors.red,
+                    border: OutlineInputBorder(borderSide: BorderSide.none),
+                    suffixIcon: Padding(
+                      padding: const EdgeInsets.only(right: 5),
+                      child: OutlinedButton(
+                        style: OutlinedButton.styleFrom(
+                          side: BorderSide.none,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                          backgroundColor: Colors.red,
+                        ),
+                        onPressed: () {},
+                        child: Text(
+                          AppData.submit,
+                          style: TextStyle(color: Colors.white, fontSize: 10),
+                        ),
                       ),
-                      onPressed: () {},
-                      child: Text("Kayıt Ol"),
                     ),
-                    hint: Text("Mail bültenimize kayıt ol"),
+                    hint: Text(AppData.searchHint),
                   ),
                 ),
               ),
