@@ -1,4 +1,4 @@
-class AppImages{
+class AppImages {
   AppImages._();
   static final imgHeader = "assets/images/img_header.png";
   static final imgIllustration1 = "assets/images/img_illustration_1.png";

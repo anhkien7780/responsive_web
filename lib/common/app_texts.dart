@@ -26,7 +26,8 @@ class AppTexts {
   static const String skillAcceptanceEvaluation = "Chấp Nhận và Đánh Giá";
   static const String skillAcceptanceEvaluationDesc =
       "Mô tả chi tiết về chấp nhận và đánh giá. Cung cấp thông tin cần thiết cho quy trình này.";
-  static const String skillBusinessRulesAnalysis = "Phân Tích Quy Tắc Nghiệp Vụ";
+  static const String skillBusinessRulesAnalysis =
+      "Phân Tích Quy Tắc Nghiệp Vụ";
   static const String skillBusinessRulesAnalysisDesc =
       "Mô tả chi tiết về phân tích quy tắc nghiệp vụ. Cung cấp thông tin cần thiết cho quy trình này.";
   static const String skillFlowCharts = "Sơ Đồ Luồng";

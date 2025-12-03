@@ -105,5 +105,4 @@ class AppDimens {
   static const double teamIntroHorizontalButtonSpacingDefault = 80;
   static const double teamIntroHorizontalButtonSpacingDesktop = 52;
   static const double teamIntroHorizontalButtonTextSize = 14;
-
 }

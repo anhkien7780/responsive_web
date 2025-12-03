@@ -14,14 +14,25 @@ class SkillList extends StatelessWidget {
         vertical: ResponsiveValue<double>(
           context,
           defaultValue: AppDimens.skillListPaddingVerticalDefault,
-          conditionalValues: [Condition.smallerThan(name: DESKTOP, value: AppDimens.skillListPaddingVerticalDesktop)],
+          conditionalValues: [
+            Condition.smallerThan(
+              name: DESKTOP,
+              value: AppDimens.skillListPaddingVerticalDesktop,
+            ),
+          ],
         ).value,
         horizontal: ResponsiveValue<double>(
           context,
           defaultValue: AppDimens.skillListPaddingHorizontalDefault,
           conditionalValues: [
-            Condition.smallerThan(name: DESKTOP, value: AppDimens.skillListPaddingHorizontalDesktop),
-            Condition.smallerThan(name: TABLET, value: AppDimens.skillListPaddingHorizontalTablet),
+            Condition.smallerThan(
+              name: DESKTOP,
+              value: AppDimens.skillListPaddingHorizontalDesktop,
+            ),
+            Condition.smallerThan(
+              name: TABLET,
+              value: AppDimens.skillListPaddingHorizontalTablet,
+            ),
           ],
         ).value,
       ),
@@ -34,7 +45,10 @@ class SkillList extends StatelessWidget {
                 context,
                 defaultValue: AppDimens.skillListTitleSizeDefault,
                 conditionalValues: [
-                  Condition.smallerThan(name: TABLET, value: AppDimens.skillListTitleSizeTablet),
+                  Condition.smallerThan(
+                    name: TABLET,
+                    value: AppDimens.skillListTitleSizeTablet,
+                  ),
                 ],
               ).value,
             ),
@@ -45,7 +59,10 @@ class SkillList extends StatelessWidget {
               context,
               defaultValue: AppDimens.skillListTitleSpacingDefault,
               conditionalValues: [
-                Condition.smallerThan(name: DESKTOP, value: AppDimens.skillListTitleSpacingDesktop),
+                Condition.smallerThan(
+                  name: DESKTOP,
+                  value: AppDimens.skillListTitleSpacingDesktop,
+                ),
               ],
             ).value,
           ),
@@ -56,7 +73,10 @@ class SkillList extends StatelessWidget {
                 context,
                 defaultValue: AppDimens.skillListDescSizeDefault,
                 conditionalValues: [
-                  Condition.smallerThan(name: TABLET, value: AppDimens.skillListDescSizeTablet),
+                  Condition.smallerThan(
+                    name: TABLET,
+                    value: AppDimens.skillListDescSizeTablet,
+                  ),
                 ],
               ).value,
             ),
@@ -67,7 +87,10 @@ class SkillList extends StatelessWidget {
               context,
               defaultValue: AppDimens.skillListDescSpacingDefault,
               conditionalValues: [
-                Condition.smallerThan(name: DESKTOP, value: AppDimens.skillListDescSpacingDesktop),
+                Condition.smallerThan(
+                  name: DESKTOP,
+                  value: AppDimens.skillListDescSpacingDesktop,
+                ),
               ],
             ).value,
           ),
@@ -77,8 +100,14 @@ class SkillList extends StatelessWidget {
               context,
               defaultValue: AppDimens.skillListGridWidthDefault,
               conditionalValues: [
-                Condition.smallerThan(name: DESKTOP, value: AppDimens.skillListGridWidthDesktop),
-                Condition.smallerThan(name: TABLET, value: AppDimens.skillListGridWidthTablet),
+                Condition.smallerThan(
+                  name: DESKTOP,
+                  value: AppDimens.skillListGridWidthDesktop,
+                ),
+                Condition.smallerThan(
+                  name: TABLET,
+                  value: AppDimens.skillListGridWidthTablet,
+                ),
               ],
             ).value,
             child: ResponsiveGridView.builder(
@@ -125,7 +154,11 @@ class SkillCard extends StatelessWidget {
       spacing: AppDimens.skillCardSpacing,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        SvgPicture.asset(iconPath, width: AppDimens.skillCardIconWidth, height: AppDimens.skillCardIconHeight),
+        SvgPicture.asset(
+          iconPath,
+          width: AppDimens.skillCardIconWidth,
+          height: AppDimens.skillCardIconHeight,
+        ),
         Text(name, textAlign: TextAlign.center),
         Text(description, textAlign: TextAlign.center),
       ],

@@ -16,16 +16,28 @@ class TestBenefitsSection extends StatelessWidget {
           context,
           defaultValue: AppDimens.testBenefitsPaddingVerticalDefault,
           conditionalValues: [
-            Condition.smallerThan(name: DESKTOP, value: AppDimens.testBenefitsPaddingVerticalDesktop),
-            Condition.smallerThan(name: TABLET, value: AppDimens.testBenefitsPaddingVerticalTablet),
+            Condition.smallerThan(
+              name: DESKTOP,
+              value: AppDimens.testBenefitsPaddingVerticalDesktop,
+            ),
+            Condition.smallerThan(
+              name: TABLET,
+              value: AppDimens.testBenefitsPaddingVerticalTablet,
+            ),
           ],
         ).value,
         horizontal: ResponsiveValue<double>(
           context,
           defaultValue: AppDimens.testBenefitsPaddingHorizontalDefault,
           conditionalValues: [
-            Condition.smallerThan(name: DESKTOP, value: AppDimens.testBenefitsPaddingHorizontalDesktop),
-            Condition.smallerThan(name: TABLET, value: AppDimens.testBenefitsPaddingHorizontalTablet),
+            Condition.smallerThan(
+              name: DESKTOP,
+              value: AppDimens.testBenefitsPaddingHorizontalDesktop,
+            ),
+            Condition.smallerThan(
+              name: TABLET,
+              value: AppDimens.testBenefitsPaddingHorizontalTablet,
+            ),
           ],
         ).value,
       ),
@@ -34,7 +46,12 @@ class TestBenefitsSection extends StatelessWidget {
         spacing: ResponsiveValue<double>(
           context,
           defaultValue: AppDimens.testBenefitsSpacingDefault,
-          conditionalValues: [Condition.smallerThan(name: DESKTOP, value: AppDimens.testBenefitsSpacingDesktop)],
+          conditionalValues: [
+            Condition.smallerThan(
+              name: DESKTOP,
+              value: AppDimens.testBenefitsSpacingDesktop,
+            ),
+          ],
         ).value,
         children: [
           Column(
@@ -49,7 +66,10 @@ class TestBenefitsSection extends StatelessWidget {
                     context,
                     defaultValue: AppDimens.testBenefitsTitleSizeDefault,
                     conditionalValues: [
-                      Condition.smallerThan(name: TABLET, value: AppDimens.testBenefitsTitleSizeTablet),
+                      Condition.smallerThan(
+                        name: TABLET,
+                        value: AppDimens.testBenefitsTitleSizeTablet,
+                      ),
                     ],
                   ).value,
                 ),
@@ -63,7 +83,10 @@ class TestBenefitsSection extends StatelessWidget {
                     context,
                     defaultValue: AppDimens.testBenefitsSubtitleSizeDefault,
                     conditionalValues: [
-                      Condition.smallerThan(name: TABLET, value: AppDimens.testBenefitsSubtitleSizeTablet),
+                      Condition.smallerThan(
+                        name: TABLET,
+                        value: AppDimens.testBenefitsSubtitleSizeTablet,
+                      ),
                     ],
                   ).value,
                 ),
@@ -84,11 +107,17 @@ class TestBenefitsSection extends StatelessWidget {
                   children: [
                     Text(
                       AppTexts.benefitsItemTitle,
-                      style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: AppDimens.testBenefitsItemTextSize,
+                      ),
                     ),
                     Text(
                       AppTexts.benefitsItemSubtitle,
-                      style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: AppDimens.testBenefitsItemTextSize,
+                      ),
                     ),
                   ],
                 ),
@@ -101,11 +130,17 @@ class TestBenefitsSection extends StatelessWidget {
                   children: [
                     Text(
                       AppTexts.benefitsItemTitle,
-                      style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: AppDimens.testBenefitsItemTextSize,
+                      ),
                     ),
                     Text(
                       AppTexts.benefitsItemSubtitle,
-                      style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: AppDimens.testBenefitsItemTextSize,
+                      ),
                     ),
                   ],
                 ),
@@ -118,11 +153,17 @@ class TestBenefitsSection extends StatelessWidget {
                   children: [
                     Text(
                       AppTexts.benefitsItemTitle,
-                      style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: AppDimens.testBenefitsItemTextSize,
+                      ),
                     ),
                     Text(
                       AppTexts.benefitsItemSubtitle,
-                      style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: AppDimens.testBenefitsItemTextSize,
+                      ),
                     ),
                   ],
                 ),
@@ -135,11 +176,17 @@ class TestBenefitsSection extends StatelessWidget {
                   children: [
                     Text(
                       AppTexts.benefitsItemTitle,
-                      style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: AppDimens.testBenefitsItemTextSize,
+                      ),
                     ),
                     Text(
                       AppTexts.benefitsItemSubtitle,
-                      style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: AppDimens.testBenefitsItemTextSize,
+                      ),
                     ),
                   ],
                 ),
