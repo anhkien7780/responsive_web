@@ -103,92 +103,51 @@ class TestBenefitsSection extends StatelessWidget {
             children: [
               ResponsiveRowColumnItem(
                 rowFlex: 1,
-                child: Column(
-                  children: [
-                    Text(
-                      AppTexts.benefitsItemTitle,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: AppDimens.testBenefitsItemTextSize,
-                      ),
-                    ),
-                    Text(
-                      AppTexts.benefitsItemSubtitle,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: AppDimens.testBenefitsItemTextSize,
-                      ),
-                    ),
-                  ],
+                child: Text(
+                  AppTexts.benefitsItem1,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: AppDimens.testBenefitsItemTextSize,
+                  ),
                 ),
               ),
               ResponsiveRowColumnItem(
                 child: SvgPicture.asset(AppSvgs.icCaretCircleDoubleRight),
               ),
               ResponsiveRowColumnItem(
-                child: Column(
-                  children: [
-                    Text(
-                      AppTexts.benefitsItemTitle,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: AppDimens.testBenefitsItemTextSize,
-                      ),
-                    ),
-                    Text(
-                      AppTexts.benefitsItemSubtitle,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: AppDimens.testBenefitsItemTextSize,
-                      ),
-                    ),
-                  ],
+                rowFlex: 1,
+                child: Text(
+                  AppTexts.benefitsItem2,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: AppDimens.testBenefitsItemTextSize,
+                  ),
                 ),
               ),
               ResponsiveRowColumnItem(
                 child: SvgPicture.asset(AppSvgs.icCaretCircleDoubleRight),
               ),
               ResponsiveRowColumnItem(
-                child: Column(
-                  children: [
-                    Text(
-                      AppTexts.benefitsItemTitle,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: AppDimens.testBenefitsItemTextSize,
-                      ),
-                    ),
-                    Text(
-                      AppTexts.benefitsItemSubtitle,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: AppDimens.testBenefitsItemTextSize,
-                      ),
-                    ),
-                  ],
+                rowFlex: 1,
+                child: Text(
+                  AppTexts.benefitsItem3,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: AppDimens.testBenefitsItemTextSize,
+                  ),
                 ),
               ),
               ResponsiveRowColumnItem(
                 child: SvgPicture.asset(AppSvgs.icCaretCircleDoubleRight),
               ),
               ResponsiveRowColumnItem(
-                child: Column(
-                  children: [
-                    Text(
-                      AppTexts.benefitsItemTitle,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: AppDimens.testBenefitsItemTextSize,
-                      ),
-                    ),
-                    Text(
-                      AppTexts.benefitsItemSubtitle,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: AppDimens.testBenefitsItemTextSize,
-                      ),
-                    ),
-                  ],
+                rowFlex: 1,
+                child: Text(
+                  AppTexts.benefitsItem4,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: AppDimens.testBenefitsItemTextSize,
+                  ),
                 ),
               ),
             ],

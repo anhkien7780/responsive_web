@@ -43,8 +43,11 @@ class AppTexts {
   // TestBenefitsSection
   static const String benefitsTitle = "Quản Lý Kiểm Thử Mang Lại Điều Gì?";
   static const String benefitsSubtitle = "Giải Pháp Hỗ Trợ IoT";
-  static const String benefitsItemTitle = "Nâng Cao Chất Lượng";
-  static const String benefitsItemSubtitle = "Phần Mềm";
+  static const String benefitsItem1 = "Nâng Cao Chất Lượng Phần Mềm";
+  static const String benefitsItem2 = "Phát Hiện Sớm Các Lỗi";
+  static const String benefitsItem3 = "Ngăn Chặn Rủi Ro";
+  static const String benefitsItem4 = "Tiết Kiệm Thời Gian & Chi Phí";
+
 
   // TeamIntro
   static const String teamIntroDiscover = "Khám Phá";
