@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:responsive_web/common/app_images.dart';
+import 'package:responsive_web/common/app_dimens.dart';
 
 class TeamIntro extends StatelessWidget {
   const TeamIntro({super.key});
@@ -14,12 +15,12 @@ class TeamIntro extends StatelessWidget {
       padding: EdgeInsets.symmetric(
         vertical: ResponsiveValue<double>(
           context,
-          defaultValue: 160,
-          conditionalValues: [Condition.smallerThan(name: TABLET, value: 90)],
+          defaultValue: AppDimens.teamIntroPaddingVerticalDefault,
+          conditionalValues: [Condition.smallerThan(name: TABLET, value: AppDimens.teamIntroPaddingVerticalTablet)],
         ).value,
       ),
       child: Column(
-        spacing: 120,
+        spacing: AppDimens.teamIntroSpacing,
         children: [
           biggerThanMobile
               ? HorizontalIntroInfo(
@@ -29,9 +30,9 @@ class TeamIntro extends StatelessWidget {
                     AppImages.imgIllustration2,
                     height: ResponsiveValue<double>(
                       context,
-                      defaultValue: 408,
+                      defaultValue: AppDimens.teamIntroImageHeightDefault,
                       conditionalValues: [
-                        Condition.smallerThan(name: DESKTOP, value: 370),
+                        Condition.smallerThan(name: DESKTOP, value: AppDimens.teamIntroImageHeightDesktop),
                       ],
                     ).value,
                   ),
@@ -47,9 +48,9 @@ class TeamIntro extends StatelessWidget {
                     AppImages.imgIllustration1,
                     height: ResponsiveValue<double>(
                       context,
-                      defaultValue: 400,
+                      defaultValue: AppDimens.teamIntroImageHeightDefault2,
                       conditionalValues: [
-                        Condition.smallerThan(name: DESKTOP, value: 370),
+                        Condition.smallerThan(name: DESKTOP, value: AppDimens.teamIntroImageHeightDesktop),
                       ],
                     ).value,
                   ),
@@ -82,21 +83,21 @@ class VerticalIntroInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: BoxConstraints(maxWidth: 338),
+      constraints: BoxConstraints(maxWidth: AppDimens.teamIntroVerticalMaxWidth),
       child: Column(
-        spacing: 30,
+        spacing: AppDimens.teamIntroVerticalSpacing,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset(imagePath, height: 312),
+          Image.asset(imagePath, height: AppDimens.teamIntroVerticalImageHeight),
           Text(
             title,
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 36, fontWeight: FontWeight.w600),
+            style: TextStyle(fontSize: AppDimens.teamIntroVerticalTitleSize, fontWeight: FontWeight.w600),
           ),
           Text(
             description,
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 14),
+            style: TextStyle(fontSize: AppDimens.teamIntroVerticalDescSize),
           ),
           SizedBox(
             width: double.infinity,
@@ -125,13 +126,13 @@ class HorizontalIntroInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: BoxConstraints(maxWidth: 1080),
+      constraints: BoxConstraints(maxWidth: AppDimens.teamIntroHorizontalMaxWidth),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         spacing: ResponsiveValue<double>(
           context,
-          defaultValue: 85,
-          conditionalValues: [Condition.smallerThan(name: DESKTOP, value: 56)],
+          defaultValue: AppDimens.teamIntroHorizontalSpacingDefault,
+          conditionalValues: [Condition.smallerThan(name: DESKTOP, value: AppDimens.teamIntroHorizontalSpacingDesktop)],
         ).value,
         children: [
           prefix ?? const SizedBox.shrink(),
@@ -139,9 +140,9 @@ class HorizontalIntroInfo extends StatelessWidget {
             constraints: BoxConstraints(
               maxWidth: ResponsiveValue<double>(
                 context,
-                defaultValue: 480,
+                defaultValue: AppDimens.teamIntroHorizontalContentMaxWidthDefault,
                 conditionalValues: [
-                  Condition.smallerThan(name: DESKTOP, value: 428),
+                  Condition.smallerThan(name: DESKTOP, value: AppDimens.teamIntroHorizontalContentMaxWidthDesktop),
                 ],
               ).value,
             ),
@@ -154,23 +155,23 @@ class HorizontalIntroInfo extends StatelessWidget {
                   style: TextStyle(
                     fontSize: ResponsiveValue<double>(
                       context,
-                      defaultValue: 64,
+                      defaultValue: AppDimens.teamIntroHorizontalTitleSizeDefault,
                       conditionalValues: [
-                        Condition.smallerThan(name: DESKTOP, value: 58),
+                        Condition.smallerThan(name: DESKTOP, value: AppDimens.teamIntroHorizontalTitleSizeDesktop),
                       ],
                     ).value,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                SizedBox(height: 40),
+                SizedBox(height: AppDimens.teamIntroHorizontalTitleSpacing),
                 Text(
                   description,
                   style: TextStyle(
                     fontSize: ResponsiveValue<double>(
                       context,
-                      defaultValue: 16,
+                      defaultValue: AppDimens.teamIntroHorizontalDescSizeDefault,
                       conditionalValues: [
-                        Condition.smallerThan(name: DESKTOP, value: 14),
+                        Condition.smallerThan(name: DESKTOP, value: AppDimens.teamIntroHorizontalDescSizeDesktop),
                       ],
                     ).value,
                   ),
@@ -178,16 +179,16 @@ class HorizontalIntroInfo extends StatelessWidget {
                 SizedBox(
                   height: ResponsiveValue<double>(
                     context,
-                    defaultValue: 80,
+                    defaultValue: AppDimens.teamIntroHorizontalButtonSpacingDefault,
                     conditionalValues: [
-                      Condition.smallerThan(name: DESKTOP, value: 52),
+                      Condition.smallerThan(name: DESKTOP, value: AppDimens.teamIntroHorizontalButtonSpacingDesktop),
                     ],
                   ).value,
                 ),
                 OutlinedButton(
                   style: OutlinedButton.styleFrom(
                     backgroundColor: Colors.red,
-                    textStyle: TextStyle(fontSize: 14, color: Colors.white),
+                    textStyle: TextStyle(fontSize: AppDimens.teamIntroHorizontalButtonTextSize, color: Colors.white),
                   ),
                   onPressed: () {},
                   child: Text("Khám Phá"),

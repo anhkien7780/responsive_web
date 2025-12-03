@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:responsive_web/common/app_data.dart';
+import 'package:responsive_web/common/app_dimens.dart';
 
 class SkillList extends StatelessWidget {
   const SkillList({super.key});
@@ -12,15 +13,15 @@ class SkillList extends StatelessWidget {
       padding: EdgeInsets.symmetric(
         vertical: ResponsiveValue<double>(
           context,
-          defaultValue: 120,
-          conditionalValues: [Condition.smallerThan(name: DESKTOP, value: 60)],
+          defaultValue: AppDimens.skillListPaddingVerticalDefault,
+          conditionalValues: [Condition.smallerThan(name: DESKTOP, value: AppDimens.skillListPaddingVerticalDesktop)],
         ).value,
         horizontal: ResponsiveValue<double>(
           context,
-          defaultValue: 143,
+          defaultValue: AppDimens.skillListPaddingHorizontalDefault,
           conditionalValues: [
-            Condition.smallerThan(name: DESKTOP, value: 130),
-            Condition.smallerThan(name: TABLET, value: 20),
+            Condition.smallerThan(name: DESKTOP, value: AppDimens.skillListPaddingHorizontalDesktop),
+            Condition.smallerThan(name: TABLET, value: AppDimens.skillListPaddingHorizontalTablet),
           ],
         ).value,
       ),
@@ -31,9 +32,9 @@ class SkillList extends StatelessWidget {
             style: TextStyle(
               fontSize: ResponsiveValue<double>(
                 context,
-                defaultValue: 36,
+                defaultValue: AppDimens.skillListTitleSizeDefault,
                 conditionalValues: [
-                  Condition.smallerThan(name: TABLET, value: 24),
+                  Condition.smallerThan(name: TABLET, value: AppDimens.skillListTitleSizeTablet),
                 ],
               ).value,
             ),
@@ -42,9 +43,9 @@ class SkillList extends StatelessWidget {
           SizedBox(
             height: ResponsiveValue<double>(
               context,
-              defaultValue: 30,
+              defaultValue: AppDimens.skillListTitleSpacingDefault,
               conditionalValues: [
-                Condition.smallerThan(name: DESKTOP, value: 15),
+                Condition.smallerThan(name: DESKTOP, value: AppDimens.skillListTitleSpacingDesktop),
               ],
             ).value,
           ),
@@ -53,9 +54,9 @@ class SkillList extends StatelessWidget {
             style: TextStyle(
               fontSize: ResponsiveValue<double>(
                 context,
-                defaultValue: 24,
+                defaultValue: AppDimens.skillListDescSizeDefault,
                 conditionalValues: [
-                  Condition.smallerThan(name: TABLET, value: 12),
+                  Condition.smallerThan(name: TABLET, value: AppDimens.skillListDescSizeTablet),
                 ],
               ).value,
             ),
@@ -64,9 +65,9 @@ class SkillList extends StatelessWidget {
           SizedBox(
             height: ResponsiveValue<double>(
               context,
-              defaultValue: 90,
+              defaultValue: AppDimens.skillListDescSpacingDefault,
               conditionalValues: [
-                Condition.smallerThan(name: DESKTOP, value: 40),
+                Condition.smallerThan(name: DESKTOP, value: AppDimens.skillListDescSpacingDesktop),
               ],
             ).value,
           ),
@@ -74,10 +75,10 @@ class SkillList extends StatelessWidget {
             alignment: AlignmentGeometry.center,
             width: ResponsiveValue<double>(
               context,
-              defaultValue: 1153,
+              defaultValue: AppDimens.skillListGridWidthDefault,
               conditionalValues: [
-                Condition.smallerThan(name: DESKTOP, value: 764),
-                Condition.smallerThan(name: TABLET, value: 335),
+                Condition.smallerThan(name: DESKTOP, value: AppDimens.skillListGridWidthDesktop),
+                Condition.smallerThan(name: TABLET, value: AppDimens.skillListGridWidthTablet),
               ],
             ).value,
             child: ResponsiveGridView.builder(
@@ -121,10 +122,10 @@ class SkillCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      spacing: 10,
+      spacing: AppDimens.skillCardSpacing,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        SvgPicture.asset(iconPath, width: 91, height: 81),
+        SvgPicture.asset(iconPath, width: AppDimens.skillCardIconWidth, height: AppDimens.skillCardIconHeight),
         Text(name, textAlign: TextAlign.center),
         Text(description, textAlign: TextAlign.center),
       ],

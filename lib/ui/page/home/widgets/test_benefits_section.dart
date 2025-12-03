@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:responsive_web/common/app_svgs.dart';
+import 'package:responsive_web/common/app_dimens.dart';
 
 class TestBenefitsSection extends StatelessWidget {
   const TestBenefitsSection({super.key});
@@ -12,18 +13,18 @@ class TestBenefitsSection extends StatelessWidget {
       padding: EdgeInsets.symmetric(
         vertical: ResponsiveValue<double>(
           context,
-          defaultValue: 68,
+          defaultValue: AppDimens.testBenefitsPaddingVerticalDefault,
           conditionalValues: [
-            Condition.smallerThan(name: DESKTOP, value: 37),
-            Condition.smallerThan(name: TABLET, value: 50),
+            Condition.smallerThan(name: DESKTOP, value: AppDimens.testBenefitsPaddingVerticalDesktop),
+            Condition.smallerThan(name: TABLET, value: AppDimens.testBenefitsPaddingVerticalTablet),
           ],
         ).value,
         horizontal: ResponsiveValue<double>(
           context,
-          defaultValue: 78,
+          defaultValue: AppDimens.testBenefitsPaddingHorizontalDefault,
           conditionalValues: [
-            Condition.smallerThan(name: DESKTOP, value: 74),
-            Condition.smallerThan(name: TABLET, value: 84),
+            Condition.smallerThan(name: DESKTOP, value: AppDimens.testBenefitsPaddingHorizontalDesktop),
+            Condition.smallerThan(name: TABLET, value: AppDimens.testBenefitsPaddingHorizontalTablet),
           ],
         ).value,
       ),
@@ -31,8 +32,8 @@ class TestBenefitsSection extends StatelessWidget {
       child: Column(
         spacing: ResponsiveValue<double>(
           context,
-          defaultValue: 64,
-          conditionalValues: [Condition.smallerThan(name: DESKTOP, value: 55)],
+          defaultValue: AppDimens.testBenefitsSpacingDefault,
+          conditionalValues: [Condition.smallerThan(name: DESKTOP, value: AppDimens.testBenefitsSpacingDesktop)],
         ).value,
         children: [
           Column(
@@ -45,9 +46,9 @@ class TestBenefitsSection extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                   fontSize: ResponsiveValue<double>(
                     context,
-                    defaultValue: 48,
+                    defaultValue: AppDimens.testBenefitsTitleSizeDefault,
                     conditionalValues: [
-                      Condition.smallerThan(name: TABLET, value: 36),
+                      Condition.smallerThan(name: TABLET, value: AppDimens.testBenefitsTitleSizeTablet),
                     ],
                   ).value,
                 ),
@@ -59,9 +60,9 @@ class TestBenefitsSection extends StatelessWidget {
                   color: Colors.white,
                   fontSize: ResponsiveValue<double>(
                     context,
-                    defaultValue: 18,
+                    defaultValue: AppDimens.testBenefitsSubtitleSizeDefault,
                     conditionalValues: [
-                      Condition.smallerThan(name: TABLET, value: 14),
+                      Condition.smallerThan(name: TABLET, value: AppDimens.testBenefitsSubtitleSizeTablet),
                     ],
                   ).value,
                 ),
@@ -72,9 +73,9 @@ class TestBenefitsSection extends StatelessWidget {
             layout: ResponsiveBreakpoints.of(context).isMobile
                 ? ResponsiveRowColumnType.COLUMN
                 : ResponsiveRowColumnType.ROW,
-            columnSpacing: 40,
+            columnSpacing: AppDimens.testBenefitsColumnSpacing,
             rowMainAxisAlignment: MainAxisAlignment.center,
-            rowSpacing: 46,
+            rowSpacing: AppDimens.testBenefitsRowSpacing,
             children: [
               ResponsiveRowColumnItem(
                 rowFlex: 1,
@@ -82,11 +83,11 @@ class TestBenefitsSection extends StatelessWidget {
                   children: [
                     Text(
                       "Nâng Cao Chất Lượng",
-                      style: TextStyle(color: Colors.white, fontSize: 18),
+                      style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
                     ),
                     Text(
                       "Phần Mềm",
-                      style: TextStyle(color: Colors.white, fontSize: 18),
+                      style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
                     ),
                   ],
                 ),
@@ -99,11 +100,11 @@ class TestBenefitsSection extends StatelessWidget {
                   children: [
                     Text(
                       "Nâng Cao Chất Lượng",
-                      style: TextStyle(color: Colors.white, fontSize: 18),
+                      style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
                     ),
                     Text(
                       "Phần Mềm",
-                      style: TextStyle(color: Colors.white, fontSize: 18),
+                      style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
                     ),
                   ],
                 ),
@@ -116,11 +117,11 @@ class TestBenefitsSection extends StatelessWidget {
                   children: [
                     Text(
                       "Nâng Cao Chất Lượng",
-                      style: TextStyle(color: Colors.white, fontSize: 18),
+                      style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
                     ),
                     Text(
                       "Phần Mềm",
-                      style: TextStyle(color: Colors.white, fontSize: 18),
+                      style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
                     ),
                   ],
                 ),
@@ -133,11 +134,11 @@ class TestBenefitsSection extends StatelessWidget {
                   children: [
                     Text(
                       "Nâng Cao Chất Lượng",
-                      style: TextStyle(color: Colors.white, fontSize: 18),
+                      style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
                     ),
                     Text(
                       "Phần Mềm",
-                      style: TextStyle(color: Colors.white, fontSize: 18),
+                      style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
                     ),
                   ],
                 ),

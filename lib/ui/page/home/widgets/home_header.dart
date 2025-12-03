@@ -30,10 +30,10 @@ class HomeHeader extends StatelessWidget {
       child: Column(
         spacing: ResponsiveValue<double>(
           context,
-          defaultValue: 135,
+          defaultValue: AppDimens.homeHeaderSpacingDefault,
           conditionalValues: [
-            Condition.smallerThan(name: DESKTOP, value: 96),
-            Condition.smallerThan(name: TABLET, value: 62),
+            Condition.smallerThan(name: DESKTOP, value: AppDimens.homeHeaderSpacingDesktop),
+            Condition.smallerThan(name: TABLET, value: AppDimens.homeHeaderSpacingTablet),
           ],
         ).value,
         children: [_createActions(context), _createInfo(context)],
@@ -45,30 +45,30 @@ class HomeHeader extends StatelessWidget {
     bool isMobile = ResponsiveBreakpoints.of(context).isMobile;
     return Padding(
       padding: EdgeInsets.only(
-        top: 35,
+        top: AppDimens.homeHeaderPaddingTop,
         right: ResponsiveValue<double>(
           context,
-          defaultValue: 125,
+          defaultValue: AppDimens.homeHeaderPaddingRightDefault,
           conditionalValues: [
-            Condition.smallerThan(name: DESKTOP, value: 40),
-            Condition.smallerThan(name: TABLET, value: 20),
+            Condition.smallerThan(name: DESKTOP, value: AppDimens.homeHeaderPaddingRightDesktop),
+            Condition.smallerThan(name: TABLET, value: AppDimens.homeHeaderPaddingRightTablet),
           ],
         ).value,
       ),
       child: Align(
         alignment: Alignment.centerRight,
         child: SizedBox(
-          height: 40,
+          height: AppDimens.homeHeaderActionHeight,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            spacing: 40,
+            spacing: AppDimens.homeHeaderActionSpacing,
             children: [
               isMobile
                   ? IconButton(onPressed: () {}, icon: Icon(Icons.menu))
                   : Expanded(
                       child: Wrap(
                         alignment: WrapAlignment.end,
-                        spacing: 40,
+                        spacing: AppDimens.homeHeaderActionSpacing,
                         children: [
                           GestureDetector(
                             onTap: () {},
@@ -95,7 +95,7 @@ class HomeHeader extends StatelessWidget {
                 style: OutlinedButton.styleFrom(
                   backgroundColor: Colors.red,
                   side: BorderSide.none,
-                  fixedSize: Size.fromHeight(40),
+                  fixedSize: Size.fromHeight(AppDimens.homeHeaderActionHeight),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5),
                   ),
@@ -118,17 +118,17 @@ class HomeHeader extends StatelessWidget {
       padding: EdgeInsets.symmetric(
         horizontal: ResponsiveValue<double>(
           context,
-          defaultValue: 122,
+          defaultValue: AppDimens.homeHeaderInfoPaddingHorizontalDefault,
           conditionalValues: [
-            Condition.smallerThan(name: DESKTOP, value: 84),
-            Condition.smallerThan(name: TABLET, value: 20),
+            Condition.smallerThan(name: DESKTOP, value: AppDimens.homeHeaderInfoPaddingHorizontalDesktop),
+            Condition.smallerThan(name: TABLET, value: AppDimens.homeHeaderInfoPaddingHorizontalTablet),
           ],
         ).value,
       ),
       child: Align(
         alignment: isMobile ? Alignment.center : Alignment.centerLeft,
         child: SizedBox(
-          width: isMobile ? 335 : 665,
+          width: isMobile ? AppDimens.homeHeaderInfoWidthMobile : AppDimens.homeHeaderInfoWidthDesktop,
           child: Column(
             crossAxisAlignment: isMobile
                 ? CrossAxisAlignment.center
@@ -139,10 +139,10 @@ class HomeHeader extends StatelessWidget {
                 style: TextStyle(
                   fontSize: ResponsiveValue<double>(
                     context,
-                    defaultValue: 64,
+                    defaultValue: AppDimens.homeHeaderTitleSizeDefault,
                     conditionalValues: [
-                      Condition.smallerThan(name: DESKTOP, value: 56),
-                      Condition.smallerThan(name: TABLET, value: 32),
+                      Condition.smallerThan(name: DESKTOP, value: AppDimens.homeHeaderTitleSizeDesktop),
+                      Condition.smallerThan(name: TABLET, value: AppDimens.homeHeaderTitleSizeTablet),
                     ],
                   ).value,
                   fontWeight: FontWeight.w700,
@@ -152,9 +152,9 @@ class HomeHeader extends StatelessWidget {
               SizedBox(
                 height: ResponsiveValue<double>(
                   context,
-                  defaultValue: 20,
+                  defaultValue: AppDimens.homeHeaderTitleSpacingDefault,
                   conditionalValues: [
-                    Condition.smallerThan(name: TABLET, value: 30),
+                    Condition.smallerThan(name: TABLET, value: AppDimens.homeHeaderTitleSpacingTablet),
                   ],
                 ).value,
               ),
@@ -163,10 +163,10 @@ class HomeHeader extends StatelessWidget {
                 style: TextStyle(
                   fontSize: ResponsiveValue<double>(
                     context,
-                    defaultValue: 20,
+                    defaultValue: AppDimens.homeHeaderDescSizeDefault,
                     conditionalValues: [
-                      Condition.smallerThan(name: DESKTOP, value: 16),
-                      Condition.smallerThan(name: TABLET, value: 12),
+                      Condition.smallerThan(name: DESKTOP, value: AppDimens.homeHeaderDescSizeDesktop),
+                      Condition.smallerThan(name: TABLET, value: AppDimens.homeHeaderDescSizeTablet),
                     ],
                   ).value,
                 ),
@@ -175,10 +175,10 @@ class HomeHeader extends StatelessWidget {
               SizedBox(
                 height: ResponsiveValue<double>(
                   context,
-                  defaultValue: 50,
+                  defaultValue: AppDimens.homeHeaderDescSpacingDefault,
                   conditionalValues: [
-                    Condition.smallerThan(name: DESKTOP, value: 20),
-                    Condition.smallerThan(name: TABLET, value: 47),
+                    Condition.smallerThan(name: DESKTOP, value: AppDimens.homeHeaderDescSpacingDesktop),
+                    Condition.smallerThan(name: TABLET, value: AppDimens.homeHeaderDescSpacingTablet),
                   ],
                 ).value,
               ),
@@ -189,10 +189,10 @@ class HomeHeader extends StatelessWidget {
                 ),
                 width: ResponsiveValue<double>(
                   context,
-                  defaultValue: 504,
+                  defaultValue: AppDimens.homeHeaderSearchWidthDefault,
                   conditionalValues: [
-                    Condition.smallerThan(name: DESKTOP, value: 422),
-                    Condition.smallerThan(name: TABLET, value: 335),
+                    Condition.smallerThan(name: DESKTOP, value: AppDimens.homeHeaderSearchWidthDesktop),
+                    Condition.smallerThan(name: TABLET, value: AppDimens.homeHeaderSearchWidthTablet),
                   ],
                 ).value,
                 child: TextField(
@@ -211,7 +211,7 @@ class HomeHeader extends StatelessWidget {
                         onPressed: () {},
                         child: Text(
                           AppData.submit,
-                          style: TextStyle(color: Colors.white, fontSize: 10),
+                          style: TextStyle(color: Colors.white, fontSize: AppDimens.homeHeaderSubmitTextSize),
                         ),
                       ),
                     ),
