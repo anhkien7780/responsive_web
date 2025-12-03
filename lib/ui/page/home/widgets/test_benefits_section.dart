@@ -38,7 +38,7 @@ class TestBenefitsSection extends StatelessWidget {
           Column(
             children: [
               Text(
-                "Test Yönetimiyle Neler Sağlıyoruz?",
+                "Quản Lý Kiểm Thử Mang Lại Điều Gì?",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
@@ -53,7 +53,7 @@ class TestBenefitsSection extends StatelessWidget {
                 ),
               ),
               Text(
-                "IoT Destekli Çözümler",
+                "Giải Pháp Hỗ Trợ IoT",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
@@ -81,28 +81,11 @@ class TestBenefitsSection extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      "Yazılım Kalitesini",
+                      "Nâng Cao Chất Lượng",
                       style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
                     Text(
-                      "Arttırıyoruz",
-                      style: TextStyle(color: Colors.white, fontSize: 18),
-                    ),
-                  ],
-                ),
-              ),
-              ResponsiveRowColumnItem(
-                child: SvgPicture.asset(AppSvgs.icCaretCircleDoubleRight),
-              ),
-              ResponsiveRowColumnItem(
-                child: Column(
-                  children: [
-                    Text(
-                      "Yazılım Kalitesini",
-                      style: TextStyle(color: Colors.white, fontSize: 18),
-                    ),
-                    Text(
-                      "Arttırıyoruz",
+                      "Phần Mềm",
                       style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
                   ],
@@ -115,11 +98,11 @@ class TestBenefitsSection extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      "Yazılım Kalitesini",
+                      "Nâng Cao Chất Lượng",
                       style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
                     Text(
-                      "Arttırıyoruz",
+                      "Phần Mềm",
                       style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
                   ],
@@ -132,11 +115,28 @@ class TestBenefitsSection extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      "Yazılım Kalitesini",
+                      "Nâng Cao Chất Lượng",
                       style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
                     Text(
-                      "Arttırıyoruz",
+                      "Phần Mềm",
+                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    ),
+                  ],
+                ),
+              ),
+              ResponsiveRowColumnItem(
+                child: SvgPicture.asset(AppSvgs.icCaretCircleDoubleRight),
+              ),
+              ResponsiveRowColumnItem(
+                child: Column(
+                  children: [
+                    Text(
+                      "Nâng Cao Chất Lượng",
+                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    ),
+                    Text(
+                      "Phần Mềm",
                       style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
                   ],

@@ -100,7 +100,7 @@ class VerticalIntroInfo extends StatelessWidget {
           ),
           SizedBox(
             width: double.infinity,
-            child: OutlinedButton(onPressed: () {}, child: Text("Keşfet")),
+            child: OutlinedButton(onPressed: () {}, child: Text("Khám Phá")),
           ),
         ],
       ),
@@ -190,7 +190,7 @@ class HorizontalIntroInfo extends StatelessWidget {
                     textStyle: TextStyle(fontSize: 14, color: Colors.white),
                   ),
                   onPressed: () {},
-                  child: Text("Keşfet"),
+                  child: Text("Khám Phá"),
                 ),
               ],
             ),
@@ -204,14 +204,14 @@ class HorizontalIntroInfo extends StatelessWidget {
 
 final teamIntroInfos = [
   TeamIntroInfo(
-    name: "Kalite ve Süreç Yönetimi",
+    name: "Quản Lý Chất Lượng và Quy Trình",
     description:
-        "Deneyimli kadromuz; birçok farklı sektörden deneyimli, PMP® sertifikasına sahip, uzman proje yöneticilerinden oluşmaktadır. Projelerinizin yönetimine destek olmak, zayıf olduğunu düşündüğünüz alanları güçlendirmek, uluslararası geçerliliği olan PMI® metodolojisini şirketinizde uygulamak ve geliştirmek için yanınızdayız.",
+        "Đội ngũ giàu kinh nghiệm của chúng tôi bao gồm các chuyên gia quản lý dự án, được chứng nhận PMP® từ nhiều lĩnh vực khác nhau. Chúng tôi sẵn sàng hỗ trợ bạn quản lý dự án, củng cố các lĩnh vực bạn cảm thấy yếu kém, đồng thời áp dụng và phát triển phương pháp luận PMI® được quốc tế công nhận trong công ty của bạn.",
   ),
   TeamIntroInfo(
-    name: "Test Yönetimi ve Analizi",
+    name: "Quản Lý và Phân Tích Kiểm Thử",
     description:
-        "Danışmanlığını yürüttüğümüz projelerde yazılım hatalarını önlemek amacıyla gerçekleştirdiğimiz testleri her proje aşamasında manuel ya da test otomasyonu ile dikkatle uygulamaktayız. Deneyimli test ekibimiz, kurumlara yüksek kalitede yazılım testleri hizmeti ile baştan sona güvenli, kaliteli ve tatmin edici bir müşteri deneyimi sunmaktadır.",
+        "Trong các dự án tư vấn, chúng tôi thực hiện kiểm thử thủ công hoặc tự động ở mọi giai đoạn dự án để ngăn ngừa lỗi phần mềm. Đội ngũ kiểm thử giàu kinh nghiệm của chúng tôi cung cấp dịch vụ kiểm thử phần mềm chất lượng cao, mang lại trải nghiệm khách hàng an toàn, chất lượng và hài lòng từ đầu đến cuối.",
   ),
 ];
 

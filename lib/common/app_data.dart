@@ -7,52 +7,52 @@ class AppData {
   AppData._();
 
   // Header
-  static const String headerTitle = "Bilgi Teknolojilerinde 23 Yıllık Tecrübe";
+  static const String headerTitle = "23 Năm Kinh Nghiệm Trong CNTT";
   static const String headerDescription =
-      "Müşterilerimizin yüksek kalite seviyelerini koruyabilmeleri için farklı sektörlerde tecrübe kazanmış uzman kadrolarımızla Proje Yönetimi, İş Analizi ve Test Yönetimi hizmetleri sunmaktayız.";
-  static const String searchHint = "Mail bültenimize kayıt ol";
-  static const String submit = "Kayıt Ol";
+      "Chúng tôi cung cấp dịch vụ Quản lý Dự án, Phân tích Nghiệp vụ và Quản lý Kiểm thử với đội ngũ chuyên gia giàu kinh nghiệm trong nhiều lĩnh vực khác nhau để giúp khách hàng duy trì tiêu chuẩn chất lượng cao.";
+  static const String searchHint = "Đăng ký nhận bản tin";
+  static const String submit = "Đăng Ký";
 
   // Skill
-  static const String skillTitle = "Kalite ve Süreç Yönetimi";
+  static const String skillTitle = "Quản Lý Chất Lượng và Quy Trình";
   static const String skillDescription =
-      "Müşterilerimizin yüksek kalite seviyelerini koruyabilmeleri için farklı sektörlerde tecrübe kazanmış uzman kadrolarımızla Proje Yönetimi, İş Analizi ve Test Yönetimi hizmetleri sunmaktayız.";
+      "Chúng tôi cung cấp dịch vụ Quản lý Dự án, Phân tích Nghiệp vụ và Quản lý Kiểm thử với đội ngũ chuyên gia giàu kinh nghiệm trong nhiều lĩnh vực khác nhau để giúp khách hàng duy trì tiêu chuẩn chất lượng cao.";
 
   static final skills = [
     Skill(
-      name: "Döküman Analizi",
+      name: "Phân Tích Tài Liệu",
       description:
-          "Ante vulputate ut at accumsan et. Feugiat at tempus, est senectus amet, elementum.",
+          "Mô tả chi tiết về phân tích tài liệu. Cung cấp thông tin cần thiết cho quy trình này.",
       iconPath: AppSvgs.icFile,
     ),
     Skill(
-      name: "Kabul ve Değerlendirme",
+      name: "Chấp Nhận và Đánh Giá",
       description:
-          "Ante vulputate ut at accumsan et. Feugiat at tempus, est senectus amet, elementum.",
+          "Mô tả chi tiết về chấp nhận và đánh giá. Cung cấp thông tin cần thiết cho quy trình này.",
       iconPath: AppSvgs.icStar,
     ),
     Skill(
-      name: "İş Kuralları Analizi",
+      name: "Phân Tích Quy Tắc Nghiệp Vụ",
       description:
-          "Ante vulputate ut at accumsan et. Feugiat at tempus, est senectus amet, elementum.",
+          "Mô tả chi tiết về phân tích quy tắc nghiệp vụ. Cung cấp thông tin cần thiết cho quy trình này.",
       iconPath: AppSvgs.icCrown,
     ),
     Skill(
-      name: "Akış Diyagramları",
+      name: "Sơ Đồ Luồng",
       description:
-          "Ante vulputate ut at accumsan et. Feugiat at tempus, est senectus amet, elementum.",
+          "Mô tả chi tiết về sơ đồ luồng. Cung cấp thông tin cần thiết cho quy trình này.",
       iconPath: AppSvgs.icChart,
     ),
     Skill(
-      name: "Paydaş Analizi",
+      name: "Phân Tích Các Bên Liên Quan",
       description:
-          "Ante vulputate ut at accumsan et. Feugiat at tempus, est senectus amet, elementum.",
+          "Mô tả chi tiết về phân tích các bên liên quan. Cung cấp thông tin cần thiết cho quy trình này.",
       iconPath: AppSvgs.icCircleChart,
     ),
     Skill(
-      name: "Prototipleme",
+      name: "Tạo Mẫu",
       description:
-          "Ante vulputate ut at accumsan et. Feugiat at tempus, est senectus amet, elementum.",
+          "Mô tả chi tiết về tạo mẫu. Cung cấp thông tin cần thiết cho quy trình này.",
       iconPath: AppSvgs.icFigma,
     ),
   ];

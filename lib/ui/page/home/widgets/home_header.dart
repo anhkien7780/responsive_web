@@ -72,20 +72,20 @@ class HomeHeader extends StatelessWidget {
                         children: [
                           GestureDetector(
                             onTap: () {},
-                            child: Text("Çözüm ve Hizmetler"),
+                            child: Text("Giải Pháp và Dịch Vụ"),
                           ),
-                          GestureDetector(onTap: () {}, child: Text("Ürünler")),
+                          GestureDetector(onTap: () {}, child: Text("Sản Phẩm")),
                           GestureDetector(
                             onTap: () {},
-                            child: Text("Teknolojiler"),
-                          ),
-                          GestureDetector(
-                            onTap: () {},
-                            child: Text("İnsan Kaynakları"),
+                            child: Text("Công Nghệ"),
                           ),
                           GestureDetector(
                             onTap: () {},
-                            child: Text("Kurumsal"),
+                            child: Text("Nhân Sự"),
+                          ),
+                          GestureDetector(
+                            onTap: () {},
+                            child: Text("Doanh Nghiệp"),
                           ),
                         ],
                       ),
@@ -101,7 +101,7 @@ class HomeHeader extends StatelessWidget {
                   ),
                 ),
                 child: const Text(
-                  "İletişim",
+                  "Liên Hệ",
                   style: TextStyle(color: Colors.white),
                 ),
               ),
