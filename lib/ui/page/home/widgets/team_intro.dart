@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:responsive_web/common/app_images.dart';
 import 'package:responsive_web/common/app_dimens.dart';
+import 'package:responsive_web/common/app_texts.dart';
 
 class TeamIntro extends StatelessWidget {
   const TeamIntro({super.key});
@@ -101,7 +102,7 @@ class VerticalIntroInfo extends StatelessWidget {
           ),
           SizedBox(
             width: double.infinity,
-            child: OutlinedButton(onPressed: () {}, child: Text("Khám Phá")),
+            child: OutlinedButton(onPressed: () {}, child: Text(AppTexts.teamIntroDiscover)),
           ),
         ],
       ),
@@ -191,7 +192,7 @@ class HorizontalIntroInfo extends StatelessWidget {
                     textStyle: TextStyle(fontSize: AppDimens.teamIntroHorizontalButtonTextSize, color: Colors.white),
                   ),
                   onPressed: () {},
-                  child: Text("Khám Phá"),
+                  child: Text(AppTexts.teamIntroDiscover),
                 ),
               ],
             ),
@@ -205,14 +206,12 @@ class HorizontalIntroInfo extends StatelessWidget {
 
 final teamIntroInfos = [
   TeamIntroInfo(
-    name: "Quản Lý Chất Lượng và Quy Trình",
-    description:
-        "Đội ngũ giàu kinh nghiệm của chúng tôi bao gồm các chuyên gia quản lý dự án, được chứng nhận PMP® từ nhiều lĩnh vực khác nhau. Chúng tôi sẵn sàng hỗ trợ bạn quản lý dự án, củng cố các lĩnh vực bạn cảm thấy yếu kém, đồng thời áp dụng và phát triển phương pháp luận PMI® được quốc tế công nhận trong công ty của bạn.",
+    name: AppTexts.teamIntroQualityTitle,
+    description: AppTexts.teamIntroQualityDesc,
   ),
   TeamIntroInfo(
-    name: "Quản Lý và Phân Tích Kiểm Thử",
-    description:
-        "Trong các dự án tư vấn, chúng tôi thực hiện kiểm thử thủ công hoặc tự động ở mọi giai đoạn dự án để ngăn ngừa lỗi phần mềm. Đội ngũ kiểm thử giàu kinh nghiệm của chúng tôi cung cấp dịch vụ kiểm thử phần mềm chất lượng cao, mang lại trải nghiệm khách hàng an toàn, chất lượng và hài lòng từ đầu đến cuối.",
+    name: AppTexts.teamIntroTestTitle,
+    description: AppTexts.teamIntroTestDesc,
   ),
 ];
 

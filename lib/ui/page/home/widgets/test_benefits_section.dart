@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:responsive_web/common/app_svgs.dart';
 import 'package:responsive_web/common/app_dimens.dart';
+import 'package:responsive_web/common/app_texts.dart';
 
 class TestBenefitsSection extends StatelessWidget {
   const TestBenefitsSection({super.key});
@@ -39,7 +40,7 @@ class TestBenefitsSection extends StatelessWidget {
           Column(
             children: [
               Text(
-                "Quản Lý Kiểm Thử Mang Lại Điều Gì?",
+                AppTexts.benefitsTitle,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
@@ -54,7 +55,7 @@ class TestBenefitsSection extends StatelessWidget {
                 ),
               ),
               Text(
-                "Giải Pháp Hỗ Trợ IoT",
+                AppTexts.benefitsSubtitle,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
@@ -82,28 +83,11 @@ class TestBenefitsSection extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      "Nâng Cao Chất Lượng",
+                      AppTexts.benefitsItemTitle,
                       style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
                     ),
                     Text(
-                      "Phần Mềm",
-                      style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
-                    ),
-                  ],
-                ),
-              ),
-              ResponsiveRowColumnItem(
-                child: SvgPicture.asset(AppSvgs.icCaretCircleDoubleRight),
-              ),
-              ResponsiveRowColumnItem(
-                child: Column(
-                  children: [
-                    Text(
-                      "Nâng Cao Chất Lượng",
-                      style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
-                    ),
-                    Text(
-                      "Phần Mềm",
+                      AppTexts.benefitsItemSubtitle,
                       style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
                     ),
                   ],
@@ -116,11 +100,11 @@ class TestBenefitsSection extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      "Nâng Cao Chất Lượng",
+                      AppTexts.benefitsItemTitle,
                       style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
                     ),
                     Text(
-                      "Phần Mềm",
+                      AppTexts.benefitsItemSubtitle,
                       style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
                     ),
                   ],
@@ -133,11 +117,28 @@ class TestBenefitsSection extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      "Nâng Cao Chất Lượng",
+                      AppTexts.benefitsItemTitle,
                       style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
                     ),
                     Text(
-                      "Phần Mềm",
+                      AppTexts.benefitsItemSubtitle,
+                      style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
+                    ),
+                  ],
+                ),
+              ),
+              ResponsiveRowColumnItem(
+                child: SvgPicture.asset(AppSvgs.icCaretCircleDoubleRight),
+              ),
+              ResponsiveRowColumnItem(
+                child: Column(
+                  children: [
+                    Text(
+                      AppTexts.benefitsItemTitle,
+                      style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
+                    ),
+                    Text(
+                      AppTexts.benefitsItemSubtitle,
                       style: TextStyle(color: Colors.white, fontSize: AppDimens.testBenefitsItemTextSize),
                     ),
                   ],

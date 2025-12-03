@@ -3,6 +3,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'package:responsive_web/common/app_data.dart';
 import 'package:responsive_web/common/app_dimens.dart';
 import 'package:responsive_web/common/app_images.dart';
+import 'package:responsive_web/common/app_texts.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({super.key});
@@ -72,20 +73,20 @@ class HomeHeader extends StatelessWidget {
                         children: [
                           GestureDetector(
                             onTap: () {},
-                            child: Text("Giải Pháp và Dịch Vụ"),
+                            child: Text(AppTexts.solutionsAndServices),
                           ),
-                          GestureDetector(onTap: () {}, child: Text("Sản Phẩm")),
+                          GestureDetector(onTap: () {}, child: Text(AppTexts.products)),
                           GestureDetector(
                             onTap: () {},
-                            child: Text("Công Nghệ"),
-                          ),
-                          GestureDetector(
-                            onTap: () {},
-                            child: Text("Nhân Sự"),
+                            child: Text(AppTexts.technologies),
                           ),
                           GestureDetector(
                             onTap: () {},
-                            child: Text("Doanh Nghiệp"),
+                            child: Text(AppTexts.humanResources),
+                          ),
+                          GestureDetector(
+                            onTap: () {},
+                            child: Text(AppTexts.enterprise),
                           ),
                         ],
                       ),
@@ -101,7 +102,7 @@ class HomeHeader extends StatelessWidget {
                   ),
                 ),
                 child: const Text(
-                  "Liên Hệ",
+                  AppTexts.contact,
                   style: TextStyle(color: Colors.white),
                 ),
               ),
